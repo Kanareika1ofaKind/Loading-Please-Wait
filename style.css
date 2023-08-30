@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body {
   display: flex;
   justify-content: center;
@@ -29,6 +31,7 @@ body {
   border-radius: 50%;
   animation: animate 2s linear infinite;
 }
+
 @keyframes animate {
   0%
   {
@@ -39,6 +42,7 @@ body {
   --a: 360deg;
   }
 }
+
 .loader1::before {
   content: '';
   position: absolute;
@@ -46,11 +50,13 @@ body {
   background: #191919;
   border-radius: 50%;
 }
+
 .loader1 span {
   position: absolute;
   inset: 0;
   animation: rotate 2s linear infinite;
 }
+
 @keyframes rotate {
   0%
   {
@@ -61,6 +67,7 @@ body {
   transform: rotate(360deg);
   }
 }
+
 .loader1 span::before {
   content: '';
   position: absolute;
@@ -80,6 +87,7 @@ body {
   background: repeating-conic-gradient(from var(--a), var(--clr1) 0%, var(--clr1) 5%, transparent 5%, transparent 40%, var(--clr1) 50%);
   animation: animate 4s linear infinite;
 }
+
 .btn::before {
 content: '';
 position: absolute;
@@ -104,6 +112,7 @@ opacity: 0;
   inset: 2px;
   background: #191919;
 }
+
 .btn span {
   position: relative;
   font-size: 1.5em;
@@ -113,6 +122,7 @@ opacity: 0;
   color: #fff;
   transition: 0.5s;
 }
+
 .btn:hover span {
   letter-spacing: 0.35em;
   color: var(--clr2);
@@ -126,6 +136,7 @@ opacity: 0;
   animation: animate 4s linear infinite;
   border-radius: 50%;
 }
+
 .loader2::before {
   content: '';
   position: absolute;
@@ -135,6 +146,7 @@ opacity: 0;
   animation-delay: -2s;
   border-radius: 50%;
 }
+
 .loader2 span {
   content: '';
   position: absolute;
@@ -155,6 +167,7 @@ opacity: 0;
   border-radius: 50%;
   box-shadow: 0 0 5px var(--clr1), 0 0 20px var(--clr1), 0 0 40px var(--clr1),0 0 60px var(--clr1);
 }
+
 .loader2 span::after {
   content: '';
   position: absolute;
@@ -166,6 +179,7 @@ opacity: 0;
   border-radius: 50%;
   box-shadow: 0 0 5px var(--clr2), 0 0 20px var(--clr2), 0 0 40px var(--clr2),0 0 60px var(--clr2);
 }
+
 .loader2::after {
   content: '';
   position: absolute;
