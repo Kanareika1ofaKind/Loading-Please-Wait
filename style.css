@@ -15,12 +15,29 @@ body {
   background: #191919;
 }
 
+@property --a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
 .loader1 {
   position: relative;
   width: 150px;
   height: 150px;
-  background: repeating-conic-gradient(from 0deg, var(--clr) 0%, var(--clr) 5%, transparent 5%, transparent 40%, var(--clr) 100%);
+  background: repeating-conic-gradient(from var(--a), var(--clr) 0%, var(--clr) 5%, transparent 5%, transparent 40%, var(--clr) 100%);
   border-radius: 50%;
+  animation: animate 2s linear infinite;
+}
+@keyframes animate {
+  0%
+  {
+  --a: 0deg;
+  }
+  100%
+  {
+  --a: 360deg;
+  }
 }
 .loader1::before {
   content: '';
@@ -32,6 +49,17 @@ body {
 .loader1 span {
   position: absolute;
   inset: 0;
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  0%
+  {
+  transform: rotate(0deg);
+  }
+  100%
+  {
+  transform: rotate(360deg);
+  }
 }
 .loader1 span::before {
   content: '';
@@ -42,5 +70,13 @@ body {
   background: var(--clr);
   border-radius: 50%;
   box-shadow: 0 0 5px var(--clr), 0 0 20px var(--clr), 0 0 40px var(--clr);
+
+}
+
+.btn {
+  position: relative;
+  text-decoration: none;
+  padding: 15px 30px;
+    background: repeating-conic-gradient(from var(--a), var(--clr1) 0%, var(--clr1) 5%, transparent 5%, transparent 40%, var(--clr1) 100%);
 
 }
